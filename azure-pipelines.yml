@@ -28,7 +28,7 @@ steps:
       jdkSourceOption: 'PreInstalled'
 
 - script: java -version
-    displayName: 'Check Java version'
+  displayName: 'Check Java version'
    
 
 - task: SonarQubePrepare@4
