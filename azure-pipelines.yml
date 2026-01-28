@@ -31,12 +31,12 @@ steps:
   displayName: 'Check Java version'
    
 
-- task: SonarQubePrepare@4
-  inputs:
-    SonarQube: 'sonarqube'
-    scannerMode: 'MSBuild'
-    projectKey: 'sonarqube'
-    projectName: 'sonarqubetwsting'    
+# - task: SonarQubePrepare@4
+#   inputs:
+#     SonarQube: 'sonarqube'
+#     scannerMode: 'MSBuild'
+#     projectKey: 'sonarqube'
+#     projectName: 'sonarqubetwsting'    
 
 - task: VSBuild@1
   inputs:
@@ -45,12 +45,12 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: SonarQubeAnalyze@4
+# - task: SonarQubeAnalyze@4
 
-# Optionally, publish the Quality Gate result
-- task: SonarQubePublish@4
-  inputs:
-    pollingTimeoutSec: '300'    
+# # Optionally, publish the Quality Gate result
+# - task: SonarQubePublish@4
+#   inputs:
+#     pollingTimeoutSec: '300'    
 
 - task: VSTest@2
   inputs:
